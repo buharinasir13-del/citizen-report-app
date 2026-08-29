@@ -15,7 +15,7 @@ function onDeviceReady() {
 
 // Fetch and display incidents from WordPress REST API
 function fetchIncidents() {
-    const wpApiUrl = 'https://your-wordpress-site.com/wp-json/wp/v2/posts?_embed';
+    const wpApiUrl = '[https://your-wordpress-site.com](https://your-wordpress-site.com)'
     
     fetch(wpApiUrl)
         .then(response => response.json())
