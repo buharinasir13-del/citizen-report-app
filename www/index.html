@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Report</title>
+</head>
+
+<body>
+
+    <h1>Citizen Report</h1>
+
+    <h2>Report an Incident</h2>
+
+    <form id="incidentForm">
+
+        <label>Incident Category</label><br>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="Accident">Accident</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Rioting">Rioting</option>
+            <option value="Robbery">Robbery</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Incident Description</label><br>
+        <textarea id="description" rows="5"
+            placeholder="Describe what happened..." required></textarea>
+
+        <br><br>
+
+        <label>Incident Location</label><br>
+        <input type="text" id="location"
+            placeholder="Enter location" required>
+
+        <br><br>
+
+        <label>Pictures (up to 7)</label><br>
+        <input type="file" id="pictures"
+            accept="image/*" multiple>
+
+        <br><br>
+
+        <button type="button" onclick="getLocation()">
+            Get My Location
+        </button>
+
+        <p id="coordinates">
+            Location not captured yet.
+        </p>
+
+        <button type="submit">
+            Submit Incident
+        </button>
+
+    </form>
+
+    <hr>
+
+    <h2>Submitted Incidents</h2>
+
+    <div id="incidents">
+        <p>No incidents submitted yet.</p>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
